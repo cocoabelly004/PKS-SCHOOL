@@ -1,0 +1,152 @@
+.container3{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(198, 25, 25, 0.649);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 12px;
+    max-width: 700px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.container3 img{
+    position: relative;
+    max-width: 600px;
+    padding-bottom: 20px;
+    
+}
+
+.container3 p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media(max-width:996px)
+{
+    .container3 img{
+        display: none;
+    }
+}
+
+
+
+.container4{
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    background-color:rgba(0, 128, 0, 0.759);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 12px;
+    max-width: 700px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.container4 p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media(max-width:996px){
+    .container4 span{
+        display: none;
+        
+    }
+    .container4{
+        left: 0px;
+        top: 600px;
+    }
+}
+
+.container5 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    background-color:rgba(39, 230, 237, 0.771);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 12px;
+    max-width: 700px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+   
+}
+
+.container55{
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    background-color:rgba(214, 39, 237, 0.771);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 12px;
+    max-width: 700px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.Campus video{
+    max-width: 400px;
+    padding: 20px;
+}
+
+
+.labs img{
+    max-width: 300px;
+    padding: 20px;
+}
+
+
+@media(max-width:996px){
+     .container5{
+        left: 0px;
+     };
+
+}
+
+.container19 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    background-color:rgba(0, 64, 255, 0.748);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 12px;
+    max-width: 700px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+   
+}
+.container19 img{
+    max-width: 300px;
+    padding: 20px;
+}
+
+
+.container20 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    background-color:rgba(255, 234, 0, 0.71);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 12px;
+    max-width: 700px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+   
+}
+.container20 img{
+    max-width: 300px;
+    padding: 20px;
+}
+

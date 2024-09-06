@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="adm.css">
+</head>
+<body style="background-image: url(img/faci/arts/a12.jpg);background-position: center;background-repeat:repeat;background-size: cover;margin-bottom: 605px;" >
+    <header>
+        <nav>
+            <ul class="sidebar" >
+
+                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">about</a></li>
+                <li><a href="adm.html">Admission</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="MPD.html">MPD</a></li>
+            </ul>
+            <ul>
+                <li><a href="#"><img class="logo" src="img/logo/logo.png" alt="School"></a></li>
+                <li><a class="name" style="color: rgb(222, 63, 63);" href="#">PKS&#160;SCHOOL</a></li>
+                <li class="hide" ><a href="index.html">Home</a></li>
+                <li class="hide" ><a href="About.html">About</a></li>
+                <li class="hide" ><a href="adm.html">Admission</a></li>
+                <li class="hide" ><a href="contact.html">Contact</a></li>
+                <li class="hide"><a href="Gallery.html">Gallery</a></li>
+                <li class="hide"><a href="MPD.html">MPD</a></li>
+                <li class="menu" onclick="showSidebar()" ><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000  "><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+        <script>
+            function showSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex'
+            }
+            function hideSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+            }
+        </script>
+    </header>
+ <main>
+   <div class="container6">
+    <p>Enter the details to enroll</p>
+    <form name="submit-to-google-sheet">
+        <input name="name" type="name" placeholder="Students name" required>
+        <input name="Father-name" type="name" placeholder="Father name" required>
+        <input name="mother-name" type="name" placeholder="Mother name" required>
+        <input name="email" type="email" placeholder="Email" required>
+        <input name="Phone" type="number" placeholder="Phone number" required>
+        <input name="class" type="text" placeholder="Class in which Admission is required" required>
+        <button type="submit">submit</button><br>
+        <span id="Success"></span>
+        
+      </form>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxmIEJSBFUmSImmvflYAR5sXl-J6nBMXh031jLDoY1ETF-0ZWN2J19SB9Q1oDC4ngZRlQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const Success = document.getElementById('Success')
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+               Success.innerHTML = "data successfully submitted";
+            } )
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    </div>
+    
+    <div class="container7">
+        <P>Please print and fill the form below.</P>
+        <a href="Files/Admission Form.pdf" target="_blank">Download Admission form</a>
+
+    </div>
+ </main>
+
+ <footer> 
+    <div class="container9" >
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>    
+    </div>
+    <div class="container10" >
+        <a href="adm.html">Admission</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <p>© 2024 - 2024 www.pksschool.com - All Rights Reserved.</p>
+
+    
+ </footer>
+
+ 
+
+
+</body>
+</html>
